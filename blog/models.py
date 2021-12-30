@@ -18,5 +18,15 @@ class Postagem(models.Model):
     #Quando haver atualização no post será mostrada.
     atualizado = models.DateTimeField(auto_now=True)
 
+    #Coloca titulo da postagem no setor de adm.
     def __str__(self):
         return self.titulo
+    
+    class Meta:
+        #Tipo de ordenação
+        ordering = ('-criado',)
+        #Nome singular
+        verbose_name = 'postagem'
+        #Nome mo plural
+        verbose_name_plural = 'postagens'
+
