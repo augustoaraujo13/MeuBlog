@@ -1,0 +1,109 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block title %}Sobre{% endblock title %}
+
+{% block content %}
+<!--Projeto-->
+<div id="projeto">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <br>
+                <br>
+                <br>
+                <br>
+                <h2 class="main-title">Projeto</h2>
+            </div>
+
+            <div class="col-md-6">
+                <h3 class="about-title">MeuBlog</h3>
+
+                <p>
+                    Projeto consiste um blog de receitas, MeuBlog é um site fictício que posta receitas
+                    Vale ressaltar que esse projeto faz parte do portfolio de Augusto Araújo, com
+                    intuito demonstração de trabalhos já feitos.
+                </p>
+
+            </div>
+            <div class="col-md-6">
+                <img class="img-fluid" src="{% static 'img/blog.jpg' %}" alt="Informativo">
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                </div>
+
+                <div class="col-md-6">
+                    <img class="img-fluid" src="{% static 'img/tecnologia.jpg' %}" alt="Informativo">
+                </div>
+
+                <div class="col-md-6">
+                    <h3 class="about-title">Tecnologias</h3>
+
+                    <p>
+                        Para realização desse projeto foram usadas varias ferramentas até conclusão.
+                    </p>
+
+                    <h3 class="about-title">Frontend</h3>
+
+                    <ul id="about-list">
+                        <li><i class="fas fa-check"></i>HTML</li>
+                        <li><i class="fas fa-check"></i>CSS</li>
+                        <li><i class="fas fa-check"></i>Bootstrap</li>
+                        <br>
+                    </ul>
+
+                    <h3 class="about-title">Backend</h3>
+
+                    <ul id="about-list">
+                        <li><i class="fas fa-check"></i>Python</li>
+                        <li><i class="fas fa-check"></i>Framework Django</li>
+                        <li><i class="fas fa-check"></i>PostgreSQL</li>
+                        <br>
+                    </ul>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                </div>
+
+                <div class="col-md-6">
+                    <h3 class="about-title">Código fonte</h3>
+
+                    <p>
+                        Durante desenvolvimento deste projeto, foi usada a pratica de versionamento de código
+                        através do Git/GitHub, link do repositório.
+                    </p>
+                    <br>
+                    <a href="https://github.com/augustoaraujo13/MeuBlog" class="main-btn">Código</a>
+                </div>
+
+                <div class="col-md-6">
+                    <img class="img-fluid" src="{% static 'img/GitHub.jpg' %}" alt="Informativo">
+                </div>
+
+            </div>
+            <br>
+            <br>
+
+        </div>
+    </div>
+    {% endblock content %}

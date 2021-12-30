@@ -1,0 +1,240 @@
+/* Barra de navegação */
+
+header,
+.navbar {
+    background-color: #efefef;
+}
+
+#nav-container {
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+#logo {
+    width: 120px;
+}
+
+.navbar-brand {
+    padding: 0;
+    color: #f9cf00;
+}
+
+.navbar-brand:hover {
+    color: #a239ca;
+}
+
+#navbar-links a {
+    font-size: 24px;
+    color: #a239ca;
+}
+
+.navbar-expand-lg .navbar-nav .nav-link {
+    padding: 0rem .8rem;
+}
+
+.nav-item.active {
+    border-bottom: 3px solid #a239ca;
+}
+
+/* cards de postagem */
+
+#card-posts {
+    background-color: #e7dfdd;
+}
+
+#card-post {
+    background-color: #7f3ca0;
+}
+
+.card-body {
+    text-align: center;
+    color: #e7dfdd;
+}
+
+.main-btn-info {
+    background-color: #062f4f;
+    color: #e7dfdd;
+    text-align: center;
+    width: 100px;
+    height: 50px;
+    padding: 10px 20px;
+    border-radius: 30px;
+    border: 3px solid transparent;
+    transition: .5s;
+}
+
+.main-btn-info:hover {
+    text-decoration: none;
+    color: #e7dfdd;
+    background-color: transparent;
+    border-color: #062f4f;
+}
+
+.main-title {
+    color: #444;
+    margin: 0 0 65px 0;
+    font-size: 40px;
+    text-align: center;
+}
+
+.main-title::after {
+    content: "";
+    /* border-top: 2px solid #333; */
+    width: 15%;
+    position: absolute;
+    top: 60px;
+    left: 42.5%;
+}
+
+.about-title {
+    font-size: 17px;
+    color: #e7dfdd;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+/* Redes socias*/
+
+.card-body {
+    text-align: center;
+    color: #e7dfdd;
+}
+
+.main-btn-info {
+    background-color: #e7dfdd;
+    color: #000000;
+    text-align: center;
+    width: 100px;
+    height: 50px;
+    padding: 10px 20px;
+    border-radius: 30px;
+    border: 3px solid transparent;
+    transition: .5s;
+}
+
+.main-btn-info:hover {
+    text-decoration: none;
+    color: #e7dfdd;
+    background-color: transparent;
+    border-color: #e7dfdd;
+}
+
+#rede-socias {
+    background-color: #e7dfdd;
+    position: static;
+}
+
+#card-face {
+    background-color: #07889b;
+}
+
+#card-youtube {
+    background-color: #ff383f;
+}
+
+#card-twitch {
+    background-color: #813772;
+}
+
+#card-insta {
+    background-color: #eb6380;
+}
+
+#card-in {
+    background-color: #0375b4
+}
+
+#card-github {
+    background-color: #007849;
+}
+
+/*Projeto area*/
+
+#projeto {
+    background-color: #e7dfdd;
+}
+
+.main-title {
+    color: #7f3ca0;
+    margin: 0 0 65px 0;
+    font-size: 50px;
+    text-align: center;
+}
+
+.main-title::after {
+    content: "";
+    width: 15%;
+    position: absolute;
+    top: 60px;
+    left: 42.5%;
+}
+
+.about-title {
+    font-size: 17px;
+    color: #7f3ca0;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+#about-list {
+    list-style: none;
+    padding-left: 0;
+}
+
+#about-list li {
+   line-height: 30px;
+}
+
+#about-list i {
+    color: #65DAF9;
+    margin-right: 15px;
+}
+
+.main-btn {
+    background-color: #65DAF9;
+    color: #000000;
+    text-align: center;
+    width: 100px;
+    height: 50px;
+    padding: 10px 20px;
+    border-radius: 30px;
+    border: 3px solid transparent;
+    transition: .5s;
+}
+
+.main-btn:hover {
+    text-decoration: none;
+    color: #000000;
+    background-color: transparent;
+    border-color: #65DAF9;
+}
+
+/* rodape */
+
+#rodape {
+    /*background-color: #6e3667;*/
+    background-color: #efefef;
+}
+
+h6 {
+    color: #a239ca;
+}
+
+#rodape .container {
+    padding: 10px 0;
+    text-align: center;
+}
+
+#rodape .container p {
+    margin-bottom: 0;
+}
+
+#rodape .container a {
+    font-weight: bold;
+    color: #f9cf00;
+}
+
+#rodape .container a:hover {
+    text-decoration: none;
+    color: #3EC1D5;
+}
