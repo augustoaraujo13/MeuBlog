@@ -1,10 +1,9 @@
-from django.urls import path, include
-from .views import home, sobre, posts
-
-app_name = 'blog'
+from django.urls import path
+from .views import home, sobre, posts, contato
 
 urlpatterns = [
     path('', home, name='home'),
     path('sobre', sobre, name='sobre'),
     path('posts', posts, name='posts'),
+    path('contato', contato, name='contato'),
 ]
