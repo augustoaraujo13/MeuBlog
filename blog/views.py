@@ -1,14 +1,15 @@
 from django.shortcuts import render
 from .forms import ContatoForm
+from .models import Postagem
 from django.contrib import messages
 
 
 def home(request):
-    return render(request, 'home.html')
+    context = {
+        'post': Postagem.objects.all().order_by('-criado')
+    }
 
-
-def posts(request):
-    return render(request, 'postagens.html')
+    return render(request, 'home.html', context)
 
 
 def sobre(request):
@@ -35,7 +36,7 @@ def contato(request):
             messages.success(request, "Mensagem enviada.")
             form = ContatoForm()
     else:
-            messages.error(request, 'Houve um erro.')
+        messages.error(request, 'Houve um erro.')
 
     context = {
         'form': form

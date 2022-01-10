@@ -6,105 +6,43 @@
 
 {% block content %}
 <!-- Cardes das postagens-->
-<div id="card-posts">
-    <div class="container">
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <div class="col-12">
-            <h2 class="main-title">Ultimas postagens</h2>
-        </div>
-        <div class="card-deck">
-            <div class="card">
-                <img class="card-img-top" src="{% static 'img/logo.png' %}" alt="Imagem de capa do card">
-                <div class="card-body" id="card-post">
-                    <h4 class="card-title">Título do card</h4>
-                    <br>
-                    <a href="https://www.facebook.com" class="main-btn-info" target="_blank">Acesse</a>
-                </div>
-            </div>
-
-            <div class="card">
-                <img class="card-img-top" src="{% static 'img/logo.png' %}" alt="Imagem de capa do card">
-                <div class="card-body" id="card-post">
-                    <h4 class="card-title">Título do card</h4>
-                    <br>
-                    <a href="https://www.facebook.com" class="main-btn-info" target="_blank">Acesse</a>
-                </div>
-            </div>
-
-            <div class="card">
-                <img class="card-img-top" src="{% static 'img/logo.png' %}" alt="Imagem de capa do card">
-                <div class="card-body" id="card-post">
-                    <h4 class="card-title">Título do card</h4>
-                    <br>
-                    <a href="https://www.facebook.com" class="main-btn-info" target="_blank">Acesse</a>
-                </div>
-            </div>
+<article>
+    <div id="card-posts">
+        <div class="container">
             <br>
             <br>
-        </div>
-    </div>
-</div>
-<!-- Card de redes sociais-->
-<div id="rede-socias">
-    <div class="container">
-        <br>
-        <br>
-        <div class="row">
+            <br>
+            <br>
+            <br>
             <div class="col-12">
-                <h2 class="main-title">Nossas redes sócias</h2>
+                <h2 class="main-title">Ultimas postagens</h2>
             </div>
-
-            <div class="col-md-3">
+            {% for p in post %}
+            <div class="card-deck">
                 <div class="card">
-                    <img src="{% static 'img/facebook-logo.png' %}" class="card-img-top" alt="Imagem de Perfil 1">
-                    <div class="card-body" id="card-face">
-                        <h5 class="card-title">Facebook</h5>
+                    <img class="card-img-top" src="/media/{{ p.imagem }}" alt="">
+                    <div class="card-body" id="card-post">
+                        <h4 class="card-title">{{ p.titulo }}</h4>
                         <br>
-                        <a href="https://www.facebook.com" class="main-btn-info" target="_blank">Acesse</a>
+                        <p class="date">
+                            Publicado por {{ p.autor }} em {{ p.criado }}
+                        </p>
+
+                        <P>
+                            {{ p.conteudo |linebreaks|truncatewords:10}}
+                        </P>
+
+                        <a href="#" class="main-btn-info" target="_blank">Acesse</a>
                     </div>
                 </div>
+                <br>
+                <br>
             </div>
-
-            <div class="col-md-3">
-                <div class="card">
-                    <img src="{% static 'img/instagram-logo.png' %}" class="card-img-top" alt="Imagem de Perfil 2">
-                    <div class="card-body" id="card-insta">
-                        <h5 class="card-title">Instagram</h5>
-                        <br>
-                        <a href="https://www.instagram.com" class="main-btn-info" target="_blank">Acesse</a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-md-3">
-                <div class="card">
-                    <img src="{% static 'img/youtube-logo.png' %}" class="card-img-top" alt="Imagem de Perfil 3">
-                    <div class="card-body" id="card-youtube">
-                        <h5 class="card-title">Youtube</h5>
-                        <br>
-                        <a href="https://www.youtube.com" class="main-btn-info" target="_blank">Acesse</a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-md-3">
-                <div class="card">
-                    <img src="{% static 'img/twitch-logo.png' %}" class="card-img-top" alt="Imagem de Perfil 4">
-                    <div class="card-body" id="card-twitch">
-                        <h5 class="card-title">Twitch</h5>
-                        <br>
-                        <a href="https://www.twitch.tv" class="main-btn-info" target="_blank">Acesse</a>
-                    </div>
-                </div>
-            </div>
-
+            <br>
+            <br>
+            {% endfor %}
         </div>
-        <br>
-        <br>
     </div>
-</div>
+</article>
+
 {% endblock content %}
