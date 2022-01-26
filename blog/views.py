@@ -44,3 +44,6 @@ def contato(request):
         'form': form
     }
     return render(request, 'contato.html', context)
+
+def postagem(request):
+    return render(request, 'post.html')
