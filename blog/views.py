@@ -2,6 +2,7 @@ from django.shortcuts import render
 from .forms import ContatoForm
 from .models import Postagem
 from django.contrib import messages
+from django.shortcuts import get_object_or_404
 
 
 def home(request):
@@ -19,6 +20,7 @@ def sobre(request):
 def contato(request):
     form = ContatoForm(request.POST or None)
 
+
     if str(request.method) == 'POST':
         if form.is_valid():
             print(f'POST:{request.POST}')
@@ -35,8 +37,8 @@ def contato(request):
 
             messages.success(request, "Mensagem enviada.")
             form = ContatoForm()
-    else:
-        messages.error(request, 'Houve um erro.')
+        else:
+            messages.error(request, 'Houve um erro.')
 
     context = {
         'form': form

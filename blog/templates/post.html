@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block title %}Sobre{% endblock title %}
+
+{% block content %}
+<div id="body-post">
+    <div class="container">
+        <br>
+        <br>
+        <div class="col-12">
+            <h2 class="main-title">{{post.title}}</h2>
+        </div>
+
+        <br>
+        <br>
+        <img src="/media/{{post.image}}" alt="">
+        <br>
+        <br>
+        <p>
+            {{post.body |linebreaks}}
+        </p>
+        <br>
+        <br>
+        <p class="date">
+            Publicado em {{ post.created }} por {{ post.author }}
+        </p>
+    </div>
+</div>
+
+{% endblock content %}
