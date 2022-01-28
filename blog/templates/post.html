@@ -2,31 +2,31 @@
 
 {% load static %}
 
-{% block title %}Sobre{% endblock title %}
+{% block title %} {{ post.titulo }} {% endblock title %}
 
 {% block content %}
-<div id="body-post">
+<div id="body-postagem">
     <div class="container">
         <br>
         <br>
-        <div class="col-12">
-            <h2 class="main-title">{{post.title}}</h2>
-        </div>
-
-        <br>
-        <br>
-        <img src="/media/{{post.image}}" alt="">
         <br>
         <br>
         <p>
-            {{post.body |linebreaks}}
+        <div class="col-12">
+            <h1 id="postagem-titulo">{{ post.titulo }}</h1>
+        </div>
+        </p>
+        <img src="/media/{{ post.imagem }}" alt="..." id="postagem-imagem">
+        <br>
+        <br>
+        <p>
+            {{post.conteudo |linebreaks}}
         </p>
         <br>
         <br>
         <p class="date">
-            Publicado em {{ post.created }} por {{ post.author }}
+            Publicação criada em {{ post.criado }} por {{ post.autor }}
         </p>
     </div>
 </div>
-
 {% endblock content %}

@@ -209,6 +209,22 @@ header,
     border-color: #65DAF9;
 }
 
+/* postagem */
+
+#body-postagem {
+    background-color:#ffffff;
+}
+
+#postagem-titulo{
+    color: #a239ca;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+#postagem-imagem{
+    image-rendering: auto;
+}
+
 /* rodape */
 
 #rodape {

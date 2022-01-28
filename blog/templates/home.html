@@ -32,7 +32,7 @@
                             {{ p.conteudo |linebreaks|truncatewords:10}}
                         </P>
 
-                        <a href="{% url 'postagem' %}" class="main-btn-info" target="_blank">Acesse</a>
+                        <a href="post/{{p.id}}" class="main-btn-info" target="_blank">Acesse</a>
                     </div>
                 </div>
                 <br>

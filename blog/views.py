@@ -3,6 +3,7 @@ from .forms import ContatoForm
 from .models import Postagem
 from django.contrib import messages
 from django.shortcuts import get_object_or_404
+from .models import Postagem
 
 
 def home(request):
@@ -19,7 +20,6 @@ def sobre(request):
 
 def contato(request):
     form = ContatoForm(request.POST or None)
-
 
     if str(request.method) == 'POST':
         if form.is_valid():
@@ -45,5 +45,12 @@ def contato(request):
     }
     return render(request, 'contato.html', context)
 
-def postagem(request):
-    return render(request, 'post.html')
+
+def postagem(request, id):
+    post1 = get_object_or_404(Postagem, pk=id)
+
+    context = {
+        'post': post1
+    }
+
+    return render(request, 'post.html', context)
