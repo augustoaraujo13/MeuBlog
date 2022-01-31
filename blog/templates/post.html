@@ -5,6 +5,7 @@
 {% block title %} {{ post.titulo }} {% endblock title %}
 
 {% block content %}
+
 <div id="body-postagem">
     <div class="container">
         <br>
@@ -19,14 +20,16 @@
         <img src="/media/{{ post.imagem }}" alt="..." id="postagem-imagem">
         <br>
         <br>
-        <p>
+        <p class="date" id="post-conteudo">
             {{post.conteudo |linebreaks}}
         </p>
         <br>
         <br>
-        <p class="date">
+        <p class="date" id="post-conteudo">
             Publicação criada em {{ post.criado }} por {{ post.autor }}
         </p>
+        <br>
+        <br>
     </div>
 </div>
 {% endblock content %}

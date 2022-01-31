@@ -11,7 +11,7 @@ from .models import Postagem
 def home(request):
 
     post = Postagem.objects.all().order_by('-criado')
-    paginacao = Paginator(post, 1)
+    paginacao = Paginator(post, 3)
     page = request.GET.get('page')
     conteudo = paginacao.get_page(page)
 

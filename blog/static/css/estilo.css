@@ -148,22 +148,6 @@ header,
     background-color: #007849;
 }
 
-/* Paginação */
-.pagination {
-    margin-bottom: 20px;
-}
-
-.step-links {
-    position: relative;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.step-links .current {
-    margin-left: 5px;
-    margin-right: 5px;
-}
-
 /*Projeto area*/
 
 #projeto {
@@ -228,7 +212,7 @@ header,
 /* postagem */
 
 #body-postagem {
-    background-color: #ffffff;
+    background-color: #e7dfdd;
 }
 
 #postagem-titulo {
@@ -239,6 +223,26 @@ header,
 
 #postagem-imagem {
     image-rendering: auto;
+}
+
+#post-conteudo {
+    text-align: center;
+}
+
+/* Paginação */
+.pagination {
+    margin-bottom: 20px;
+}
+
+.step-links {
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.step-links .current {
+    margin-left: 5px;
+    margin-right: 5px;
 }
 
 /* rodape */
