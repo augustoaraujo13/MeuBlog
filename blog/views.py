@@ -1,14 +1,22 @@
+from turtle import pos
 from django.shortcuts import render
-from .forms import ContatoForm
-from .models import Postagem
 from django.contrib import messages
 from django.shortcuts import get_object_or_404
+from django.core.paginator import Paginator
+
+from .forms import ContatoForm
 from .models import Postagem
 
 
 def home(request):
+
+    post = Postagem.objects.all().order_by('-criado')
+    paginacao = Paginator(post, 1)
+    page = request.GET.get('page')
+    conteudo = paginacao.get_page(page)
+
     context = {
-        'post': Postagem.objects.all().order_by('-criado')
+        'post': conteudo
     }
 
     return render(request, 'home.html', context)

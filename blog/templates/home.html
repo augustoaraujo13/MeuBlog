@@ -42,6 +42,24 @@
             <br>
             {% endfor %}
         </div>
+        <div class="pagination">
+            <span class="step-links">
+                {% if post.has_previous %}
+                <a href="?page={{ post.previous_page_number }}"><i class="fas fa-arrow-left"></i></a>
+                {% endif %}
+                {% if post.paginator.num_pages %}
+                <span class="current">
+                    {{ post.number }} de {{ post.paginator.num_pages }}
+                </span>
+                {% endif %}
+
+                {% if post.has_next %}
+                <a href="?page={{ post.next_page_number }}"><i class="fas fa-arrow-right"></i></a>
+                {% endif %}
+            </span>
+        </div>
+        <br>
+        <br>
     </div>
 </article>
 
