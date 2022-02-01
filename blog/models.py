@@ -24,10 +24,6 @@ class Postagem(models.Model):
     def __str__(self):
         return self.titulo
 
-    # Metodo que direnciona para uma url
-    def get_absolute_url(self):
-        return reverse('templates:post', kwargs={"slug": self.slug})
-
     class Meta:
         # Tipo de ordenação
         ordering = ('-criado',)
