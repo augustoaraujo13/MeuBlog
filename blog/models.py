@@ -30,3 +30,4 @@ class Postagem(models.Model):
         verbose_name = 'postagem'
         # Nome mo plural
         verbose_name_plural = 'postagens'
+        
